@@ -1,775 +1,756 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#15100d">
-<meta name="description" content="Deluxe Saloon — a nostalgic Indian music room.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#15100c">
+<meta name="description" content="Deluxe Saloon — Hindi music, nostalgia and the neighbourhood barber-shop experience.">
 <title>Deluxe Saloon — Hindi Music Room</title>
 
 <style>
 :root{
-  --bg:#120e0b;
-  --bg2:#1a130f;
-  --card:#211814;
-  --card2:#2a1f18;
-  --gold:#d7aa65;
-  --gold2:#efd08e;
-  --cream:#f5e8d0;
-  --muted:#ad9b83;
-  --line:rgba(245,232,208,.11);
-  --green:#88a979;
-  --red:#9d5545;
+    --bg:#110c09;
+    --bg2:#1a120e;
+    --card:#211713;
+    --card2:#2a1d17;
+    --cream:#f3e5cb;
+    --muted:#a99780;
+    --gold:#d4a45e;
+    --gold2:#efc77e;
+    --line:rgba(243,229,203,.11);
+    --green:#88a77b;
 }
 
-*{box-sizing:border-box}
+*{
+    box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth}
+html{
+    scroll-behavior:smooth;
+}
 
 body{
-  margin:0;
-  color:var(--cream);
-  background:
-    radial-gradient(circle at 50% -10%,rgba(215,170,101,.13),transparent 35%),
-    linear-gradient(180deg,var(--bg2),var(--bg));
-  font-family:Georgia,"Times New Roman",serif;
-  min-height:100vh;
+    margin:0;
+    min-height:100vh;
+    color:var(--cream);
+    background:
+        radial-gradient(circle at 50% -10%,rgba(212,164,94,.13),transparent 36%),
+        linear-gradient(180deg,var(--bg2),var(--bg));
+    font-family:Georgia,"Times New Roman",serif;
 }
 
-button,input{
-  font:inherit;
+button,
+input{
+    font:inherit;
 }
 
-button{cursor:pointer}
+button{
+    cursor:pointer;
+}
 
 a{
-  color:inherit;
-  text-decoration:none;
+    color:inherit;
+    text-decoration:none;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
-.header{
-  width:min(1160px,calc(100% - 32px));
-  margin:auto;
-  padding:22px 0;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+header{
+    width:min(1180px,calc(100% - 32px));
+    margin:auto;
+    padding:20px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
 }
 
 .logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
+    width:45px;
+    height:45px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-size:22px;
+    background:#20150f;
 }
 
-.logo-circle{
-  width:45px;
-  height:45px;
-  border:1px solid var(--gold);
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  font-size:22px;
+.brand-title{
+    font-size:19px;
 }
 
-.logo-title{
-  font-size:19px;
-  letter-spacing:.5px;
-}
-
-.logo-sub{
-  display:block;
-  color:var(--muted);
-  font-size:9px;
-  text-transform:uppercase;
-  letter-spacing:3px;
-  margin-top:3px;
+.brand-sub{
+    display:block;
+    color:var(--muted);
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    margin-top:3px;
 }
 
 .support{
-  border:1px solid rgba(215,170,101,.3);
-  background:rgba(215,170,101,.06);
-  color:var(--cream);
-  border-radius:999px;
-  padding:9px 15px;
+    border:1px solid rgba(212,164,94,.3);
+    background:rgba(212,164,94,.06);
+    color:var(--cream);
+    border-radius:999px;
+    padding:9px 15px;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero{
-  width:min(900px,calc(100% - 32px));
-  margin:42px auto 80px;
-  text-align:center;
+    width:min(900px,calc(100% - 32px));
+    margin:42px auto 80px;
+    text-align:center;
 }
 
 .eyebrow{
-  color:var(--gold);
-  text-transform:uppercase;
-  letter-spacing:4px;
-  font-size:10px;
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:4px;
+    font-size:10px;
 }
 
 .hero h1{
-  font-weight:400;
-  font-size:clamp(48px,10vw,92px);
-  line-height:.82;
-  margin:17px 0;
-  letter-spacing:-4px;
+    margin:17px 0;
+    font-size:clamp(50px,10vw,90px);
+    font-weight:400;
+    line-height:.82;
+    letter-spacing:-4px;
 }
 
 .hero h1 span{
-  display:block;
-  color:var(--gold);
-  font-size:.4em;
-  letter-spacing:8px;
-  margin-top:22px;
+    display:block;
+    color:var(--gold);
+    font-size:.4em;
+    letter-spacing:8px;
+    margin-top:22px;
 }
 
-.hero-description{
-  max-width:620px;
-  margin:28px auto;
-  color:var(--muted);
-  line-height:1.7;
-  font-size:14px;
+.intro{
+    max-width:620px;
+    margin:28px auto;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.7;
 }
 
-/* PLAYER */
+/* ================= MUSIC ROOM ================= */
 
-.player-card{
-  background:
-    linear-gradient(145deg,rgba(255,255,255,.035),transparent),
-    var(--card);
-  border:1px solid var(--line);
-  border-radius:25px;
-  padding:26px;
-  box-shadow:0 30px 80px rgba(0,0,0,.35);
-  text-align:left;
+.music-card{
+    background:
+        linear-gradient(145deg,rgba(255,255,255,.035),transparent),
+        var(--card);
+    border:1px solid var(--line);
+    border-radius:25px;
+    padding:26px;
+    box-shadow:0 30px 80px rgba(0,0,0,.4);
+    text-align:left;
 }
 
-.player-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  margin-bottom:20px;
+.music-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    margin-bottom:20px;
 }
 
 .now-label{
-  color:var(--gold);
-  text-transform:uppercase;
-  font-size:9px;
-  letter-spacing:3px;
+    color:var(--gold);
+    text-transform:uppercase;
+    font-size:9px;
+    letter-spacing:3px;
 }
 
 .now-title{
-  font-size:23px;
-  margin-top:5px;
+    margin-top:6px;
+    font-size:23px;
 }
 
-.live{
-  color:#9cbd8d;
-  font-size:10px;
-  white-space:nowrap;
+.status{
+    color:#9bbb8b;
+    font-size:10px;
+    white-space:nowrap;
 }
 
-.live:before{
-  content:"";
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  display:inline-block;
-  background:var(--green);
-  box-shadow:0 0 12px var(--green);
-  margin-right:6px;
+.status:before{
+    content:"";
+    width:7px;
+    height:7px;
+    display:inline-block;
+    border-radius:50%;
+    background:var(--green);
+    box-shadow:0 0 10px var(--green);
+    margin-right:6px;
 }
 
-/* CASSETTE */
+/* ================= CASSETTE ================= */
 
 .cassette{
-  background:#30231b;
-  border-radius:16px;
-  padding:18px;
-}
-
-.cassette-label{
-  min-height:130px;
-  border-radius:8px;
-  padding:20px;
-  color:#291d14;
-  background:
-    linear-gradient(120deg,rgba(255,255,255,.3),transparent),
-    #e8d4ae;
-  position:relative;
-  overflow:hidden;
-}
-
-.cassette-label:after{
-  content:"DELUXE SALOON";
-  position:absolute;
-  right:12px;
-  bottom:10px;
-  font-size:8px;
-  letter-spacing:2px;
-  opacity:.35;
-}
-
-.track-number{
-  font-size:9px;
-  text-transform:uppercase;
-  letter-spacing:2px;
-}
-
-.current-song{
-  font-size:27px;
-  margin-top:8px;
-  max-width:80%;
-}
-
-.current-artist{
-  font-size:13px;
-  opacity:.65;
-  margin-top:5px;
+    background:#302219;
+    border-radius:16px;
+    padding:18px;
 }
 
 .reels{
-  display:flex;
-  justify-content:center;
-  gap:75px;
-  margin-bottom:-7px;
-  position:relative;
-  z-index:2;
+    display:flex;
+    justify-content:center;
+    gap:75px;
+    margin-bottom:-7px;
+    position:relative;
+    z-index:2;
 }
 
 .reel{
-  width:46px;
-  height:46px;
-  border-radius:50%;
-  background:#16110e;
-  border:5px solid #584435;
-  animation:spin 2s linear infinite;
-  animation-play-state:paused;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:#15100d;
+    border:5px solid #574335;
+    animation:spin 2s linear infinite;
+    animation-play-state:paused;
 }
 
 .reel.playing{
-  animation-play-state:running;
+    animation-play-state:running;
 }
 
 @keyframes spin{
-  to{transform:rotate(360deg)}
+    to{
+        transform:rotate(360deg);
+    }
 }
 
-/* CONTROLS */
+.cassette-label{
+    min-height:135px;
+    border-radius:8px;
+    padding:21px;
+    color:#291c13;
+    background:
+        linear-gradient(120deg,rgba(255,255,255,.3),transparent),
+        #e7d2aa;
+    position:relative;
+    overflow:hidden;
+}
+
+.cassette-label:after{
+    content:"DELUXE SALOON";
+    position:absolute;
+    right:12px;
+    bottom:10px;
+    font-size:8px;
+    letter-spacing:2px;
+    opacity:.35;
+}
+
+.track-no{
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+.song-title{
+    font-size:27px;
+    margin-top:8px;
+    max-width:80%;
+}
+
+.song-artist{
+    font-size:13px;
+    opacity:.65;
+    margin-top:5px;
+}
+
+/* ================= PLAYER ================= */
+
+.player-message{
+    text-align:center;
+    color:var(--muted);
+    font-size:11px;
+    margin:18px 0 0;
+}
+
+.player-message a{
+    color:var(--gold);
+}
 
 .controls{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:12px;
-  margin:25px 0 18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    margin:25px 0 18px;
 }
 
 .control{
-  width:46px;
-  height:46px;
-  border-radius:50%;
-  border:1px solid var(--line);
-  background:#281d17;
-  color:var(--cream);
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:#281c16;
+    color:var(--cream);
 }
 
 .control:hover{
-  border-color:var(--gold);
+    border-color:var(--gold);
 }
 
 .play{
-  width:67px;
-  height:67px;
-  background:var(--gold);
-  color:#1b120d;
-  border:0;
-  font-size:22px;
+    width:67px;
+    height:67px;
+    background:var(--gold);
+    color:#1a100b;
+    border:0;
+    font-size:23px;
 }
 
 .progress{
-  height:5px;
-  background:rgba(255,255,255,.08);
-  border-radius:20px;
-  overflow:hidden;
-  cursor:pointer;
+    height:5px;
+    background:rgba(255,255,255,.08);
+    border-radius:20px;
+    overflow:hidden;
 }
 
 .progress-fill{
-  height:100%;
-  width:0%;
-  background:var(--gold);
+    height:100%;
+    width:0;
+    background:var(--gold);
 }
 
 .times{
-  display:flex;
-  justify-content:space-between;
-  color:var(--muted);
-  font-size:10px;
-  margin-top:6px;
+    display:flex;
+    justify-content:space-between;
+    color:var(--muted);
+    font-size:10px;
+    margin-top:6px;
 }
 
 .options{
-  display:flex;
-  justify-content:center;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-top:22px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:20px;
 }
 
 .option{
-  background:transparent;
-  color:var(--muted);
-  border:1px solid var(--line);
-  border-radius:999px;
-  padding:8px 13px;
-  font-size:11px;
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--muted);
+    border-radius:999px;
+    padding:8px 13px;
+    font-size:11px;
 }
 
 .option.active{
-  color:var(--cream);
-  border-color:rgba(215,170,101,.45);
-  background:rgba(215,170,101,.08);
+    color:var(--cream);
+    background:rgba(212,164,94,.08);
+    border-color:rgba(212,164,94,.45);
 }
 
-/* SEARCH */
+/* ================= SEARCH ================= */
 
-.music-area{
-  margin-top:20px;
+.search-area{
+    margin-top:24px;
 }
 
 .search-row{
-  display:flex;
-  gap:8px;
+    display:flex;
+    gap:8px;
 }
 
 .search-input{
-  flex:1;
-  min-width:0;
-  background:#1d1511;
-  border:1px solid var(--line);
-  color:var(--cream);
-  border-radius:12px;
-  padding:14px 15px;
-  outline:none;
+    flex:1;
+    min-width:0;
+    background:#1b130f;
+    border:1px solid var(--line);
+    color:var(--cream);
+    border-radius:12px;
+    padding:14px;
+    outline:none;
 }
 
 .search-input:focus{
-  border-color:rgba(215,170,101,.55);
+    border-color:rgba(212,164,94,.55);
 }
 
 .search-button{
-  border:1px solid var(--line);
-  background:var(--gold);
-  color:#21150d;
-  border-radius:12px;
-  padding:0 19px;
+    border:0;
+    background:var(--gold);
+    color:#21150d;
+    border-radius:12px;
+    padding:0 18px;
+    font-weight:bold;
 }
 
-.search-hint{
-  color:var(--muted);
-  font-size:10px;
-  margin:9px 2px 15px;
+.search-note{
+    color:var(--muted);
+    font-size:10px;
+    margin:9px 2px 16px;
 }
 
-/* FILTERS */
+/* ================= CATEGORIES ================= */
 
-.filters{
-  display:flex;
-  gap:7px;
-  overflow-x:auto;
-  padding-bottom:6px;
-  scrollbar-width:none;
+.categories{
+    display:flex;
+    gap:7px;
+    overflow-x:auto;
+    padding-bottom:6px;
+    scrollbar-width:none;
 }
 
-.filters::-webkit-scrollbar{
-  display:none;
+.categories::-webkit-scrollbar{
+    display:none;
 }
 
-.filter{
-  white-space:nowrap;
-  border:1px solid var(--line);
-  background:transparent;
-  color:var(--muted);
-  border-radius:999px;
-  padding:7px 11px;
-  font-size:10px;
+.category{
+    white-space:nowrap;
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--muted);
+    border-radius:999px;
+    padding:8px 12px;
+    font-size:10px;
 }
 
-.filter:hover,
-.filter.active{
-  color:var(--cream);
-  border-color:rgba(215,170,101,.4);
+.category:hover,
+.category.active{
+    color:var(--cream);
+    border-color:rgba(212,164,94,.4);
 }
 
-/* RESULTS */
+/* ================= LIBRARY ================= */
 
-.results{
-  display:grid;
-  gap:7px;
-  margin-top:13px;
+.library-title{
+    margin:20px 0 10px;
+    font-size:13px;
+    color:var(--gold);
+    text-transform:uppercase;
+    letter-spacing:2px;
 }
 
-.result{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:11px;
-  border:1px solid transparent;
-  border-radius:13px;
-  background:rgba(255,255,255,.025);
-  transition:.18s;
+.library{
+    display:grid;
+    gap:7px;
 }
 
-.result:hover{
-  border-color:rgba(215,170,101,.25);
-  background:rgba(215,170,101,.05);
+.song{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:12px;
+    background:rgba(255,255,255,.025);
+    border:1px solid transparent;
+    border-radius:13px;
+    transition:.18s;
 }
 
-.thumbnail{
-  width:58px;
-  height:42px;
-  object-fit:cover;
-  border-radius:7px;
-  background:#111;
+.song:hover{
+    background:rgba(212,164,94,.06);
+    border-color:rgba(212,164,94,.2);
 }
 
-.result-info{
-  min-width:0;
-  flex:1;
+.song-number{
+    width:25px;
+    color:var(--muted);
+    font-size:10px;
 }
 
-.result-title{
-  font-size:13px;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+.song-info{
+    flex:1;
+    min-width:0;
 }
 
-.result-channel{
-  color:var(--muted);
-  font-size:10px;
-  margin-top:4px;
+.song-name{
+    font-size:13px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
 }
 
-.result-play{
-  border:0;
-  background:transparent;
-  color:var(--gold);
-  font-size:17px;
+.song-meta{
+    color:var(--muted);
+    font-size:10px;
+    margin-top:4px;
 }
 
-.loading{
-  padding:25px;
-  color:var(--muted);
-  text-align:center;
-  font-size:12px;
+.song-search{
+    border:0;
+    background:transparent;
+    color:var(--gold);
+    font-size:16px;
 }
 
-.empty{
-  padding:25px;
-  text-align:center;
-  color:var(--muted);
-  border:1px dashed var(--line);
-  border-radius:13px;
-}
-
-/* FEATURES */
+/* ================= FEATURES ================= */
 
 .features{
-  width:min(1000px,calc(100% - 32px));
-  margin:90px auto;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:14px;
+    width:min(1000px,calc(100% - 32px));
+    margin:90px auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
 }
 
 .feature{
-  background:rgba(255,255,255,.025);
-  border:1px solid var(--line);
-  border-radius:17px;
-  padding:23px;
+    padding:23px;
+    border:1px solid var(--line);
+    border-radius:17px;
+    background:rgba(255,255,255,.025);
 }
 
 .feature-icon{
-  font-size:25px;
+    font-size:25px;
 }
 
 .feature h3{
-  font-size:17px;
-  margin:14px 0 7px;
+    margin:14px 0 7px;
+    font-size:17px;
 }
 
 .feature p{
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.7;
-  margin:0;
+    margin:0;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.7;
 }
 
-/* QUOTE */
+/* ================= QUOTE ================= */
 
 .quote-section{
-  width:min(760px,calc(100% - 32px));
-  margin:0 auto 100px;
-  text-align:center;
+    width:min(760px,calc(100% - 32px));
+    margin:0 auto 100px;
+    text-align:center;
 }
 
 .quote{
-  font-size:clamp(21px,4vw,31px);
-  line-height:1.4;
-  margin-top:15px;
+    font-size:clamp(21px,4vw,31px);
+    line-height:1.4;
+    margin-top:15px;
 }
 
 .quote-author{
-  color:var(--gold);
-  font-size:10px;
-  text-transform:uppercase;
-  letter-spacing:3px;
-  margin-top:17px;
+    color:var(--gold);
+    font-size:10px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-top:17px;
 }
 
-/* FAQ */
+/* ================= FAQ ================= */
 
 .faq{
-  width:min(760px,calc(100% - 32px));
-  margin:0 auto 100px;
+    width:min(760px,calc(100% - 32px));
+    margin:0 auto 100px;
 }
 
 .faq h2{
-  font-size:35px;
-  font-weight:400;
-  margin:10px 0 25px;
+    font-weight:400;
+    font-size:35px;
+    margin:10px 0 25px;
 }
 
 details{
-  border-top:1px solid var(--line);
+    border-top:1px solid var(--line);
 }
 
 details:last-child{
-  border-bottom:1px solid var(--line);
+    border-bottom:1px solid var(--line);
 }
 
 summary{
-  list-style:none;
-  padding:19px 0;
-  cursor:pointer;
-  display:flex;
-  justify-content:space-between;
-  font-size:14px;
+    list-style:none;
+    cursor:pointer;
+    padding:19px 0;
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
 }
 
 summary::-webkit-details-marker{
-  display:none;
+    display:none;
 }
 
 summary:after{
-  content:"+";
-  color:var(--gold);
+    content:"+";
+    color:var(--gold);
 }
 
 details[open] summary:after{
-  content:"−";
+    content:"−";
 }
 
 .answer{
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.7;
-  padding:0 0 19px;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.7;
+    padding-bottom:19px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 footer{
-  border-top:1px solid var(--line);
-  padding:38px 20px;
-  text-align:center;
-  color:var(--muted);
-  font-size:10px;
+    border-top:1px solid var(--line);
+    padding:38px 20px;
+    text-align:center;
+    color:var(--muted);
+    font-size:10px;
 }
 
 .footer-title{
-  color:var(--cream);
-  font-size:17px;
-  margin-bottom:10px;
+    color:var(--cream);
+    font-size:17px;
+    margin-bottom:10px;
 }
 
 .footer-links{
-  display:flex;
-  justify-content:center;
-  gap:18px;
-  margin:17px 0;
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    margin:18px 0;
 }
 
 .footer-links a:hover{
-  color:var(--gold);
+    color:var(--gold);
 }
 
-/* RAIN */
+/* ================= RAIN ================= */
 
 .rain{
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  opacity:0;
-  z-index:30;
-  transition:.3s;
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:0;
+    z-index:20;
+    transition:.3s;
 }
 
 body.raining .rain{
-  opacity:.28;
+    opacity:.28;
 }
 
 .drop{
-  position:absolute;
-  top:-40px;
-  width:1px;
-  height:34px;
-  background:linear-gradient(transparent,#b6d1d8);
-  animation:rain linear infinite;
+    position:absolute;
+    top:-40px;
+    width:1px;
+    height:34px;
+    background:linear-gradient(transparent,#b7d1d8);
+    animation:rainfall linear infinite;
 }
 
-@keyframes rain{
-  to{transform:translateY(110vh)}
+@keyframes rainfall{
+    to{
+        transform:translateY(110vh);
+    }
 }
 
 .rain-button{
-  position:fixed;
-  right:16px;
-  bottom:16px;
-  z-index:40;
-  background:rgba(25,18,14,.92);
-  border:1px solid var(--line);
-  color:var(--cream);
-  border-radius:999px;
-  padding:10px 14px;
+    position:fixed;
+    right:16px;
+    bottom:16px;
+    z-index:40;
+    border:1px solid var(--line);
+    background:rgba(25,18,14,.94);
+    color:var(--cream);
+    border-radius:999px;
+    padding:10px 14px;
 }
 
-/* MODAL */
+/* ================= MODAL ================= */
 
 .modal{
-  position:fixed;
-  inset:0;
-  z-index:100;
-  display:none;
-  place-items:center;
-  background:rgba(0,0,0,.78);
-  padding:20px;
+    position:fixed;
+    inset:0;
+    z-index:100;
+    display:none;
+    place-items:center;
+    background:rgba(0,0,0,.78);
+    padding:20px;
 }
 
 .modal.open{
-  display:grid;
+    display:grid;
 }
 
 .modal-card{
-  width:min(440px,100%);
-  background:#211814;
-  border:1px solid var(--line);
-  border-radius:22px;
-  padding:28px;
-  text-align:center;
-  position:relative;
+    width:min(430px,100%);
+    background:#211713;
+    border:1px solid var(--line);
+    border-radius:22px;
+    padding:28px;
+    text-align:center;
+    position:relative;
 }
 
 .close{
-  position:absolute;
-  top:10px;
-  right:14px;
-  background:transparent;
-  border:0;
-  color:var(--muted);
-  font-size:25px;
-}
-
-.modal-card h2{
-  margin-top:0;
+    position:absolute;
+    right:13px;
+    top:9px;
+    background:transparent;
+    border:0;
+    color:var(--muted);
+    font-size:25px;
 }
 
 .modal-card p{
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.7;
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.7;
 }
 
-.api-note{
-  background:rgba(215,170,101,.06);
-  border:1px solid rgba(215,170,101,.15);
-  padding:13px;
-  border-radius:12px;
-  font-size:11px;
-  color:var(--muted);
-  line-height:1.6;
+.modal-button{
+    width:100%;
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--cream);
+    padding:12px;
+    border-radius:12px;
 }
 
-/* HIDDEN YOUTUBE PLAYER */
-
-#youtube-player{
-  position:fixed;
-  left:-1000px;
-  top:-1000px;
-  width:1px;
-  height:1px;
-}
-
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:700px){
 
-  .header{
-    padding-top:15px;
-  }
+    header{
+        padding-top:15px;
+    }
 
-  .hero{
-    margin-top:30px;
-  }
+    .hero{
+        margin-top:30px;
+    }
 
-  .hero h1{
-    letter-spacing:-3px;
-  }
+    .music-card{
+        padding:16px;
+        border-radius:19px;
+    }
 
-  .player-card{
-    padding:16px;
-    border-radius:19px;
-  }
+    .song-title{
+        font-size:22px;
+    }
 
-  .current-song{
-    font-size:22px;
-  }
+    .reels{
+        gap:50px;
+    }
 
-  .reels{
-    gap:50px;
-  }
+    .features{
+        grid-template-columns:1fr;
+        margin:70px auto;
+    }
 
-  .features{
-    grid-template-columns:1fr;
-    margin:70px auto;
-  }
+    .search-button{
+        padding:0 14px;
+    }
 
-  .search-button{
-    padding:0 14px;
-  }
-
-  .result-channel{
-    max-width:150px;
-    overflow:hidden;
-    white-space:nowrap;
-    text-overflow:ellipsis;
-  }
-
-}
-
-@media(prefers-reduced-motion:reduce){
-  *{
-    animation:none!important;
-    scroll-behavior:auto!important;
-  }
+    .support{
+        padding:8px 11px;
+        font-size:12px;
+    }
 }
 </style>
 </head>
@@ -778,19 +759,22 @@ body.raining .rain{
 
 <div class="rain" id="rain"></div>
 
-<header class="header">
+<header>
 
-  <a class="logo" href="#">
-    <div class="logo-circle">✂</div>
-    <div>
-      <div class="logo-title">डीलक्स सैलून</div>
-      <span class="logo-sub">Hindi Music Room</span>
-    </div>
-  </a>
+    <a href="#" class="brand">
 
-  <button class="support" id="supportButton">
-    ❤️ Support
-  </button>
+        <div class="logo">✂</div>
+
+        <div>
+            <div class="brand-title">डीलक्स सैलून</div>
+            <span class="brand-sub">Hindi Music Room</span>
+        </div>
+
+    </a>
+
+    <button class="support" id="support">
+        ❤️ Support
+    </button>
 
 </header>
 
@@ -799,279 +783,398 @@ body.raining .rain{
 
 <section class="hero">
 
-  <div class="eyebrow">Welcome to</div>
-
-  <h1>
-    Deluxe
-    <span>Saloon</span>
-  </h1>
-
-  <p class="hero-description">
-    Your digital neighbourhood saloon.
-    Search Hindi music from across the decades,
-    pick a song and let the room come alive.
-  </p>
-
-
-  <div class="player-card">
-
-    <div class="player-header">
-
-      <div>
-        <div class="now-label">Now Playing</div>
-        <div class="now-title" id="now-title">
-          Deluxe Saloon Radio
-        </div>
-      </div>
-
-      <div class="live">READY</div>
-
+    <div class="eyebrow">
+        Welcome to
     </div>
 
+    <h1>
+        Deluxe
+        <span>Saloon</span>
+    </h1>
 
-    <div class="cassette">
+    <p class="intro">
+        A little digital time machine for the neighbourhood
+        salon. Search Hindi music, discover old favourites,
+        and keep the retro atmosphere running.
+    </p>
 
-      <div class="reels">
-        <div class="reel" id="reel1"></div>
-        <div class="reel" id="reel2"></div>
-      </div>
 
-      <div class="cassette-label">
+    <div class="music-card">
 
-        <div class="track-number" id="track-number">
-          DELUXE RADIO
+        <div class="music-header">
+
+            <div>
+                <div class="now-label">
+                    Deluxe Radio
+                </div>
+
+                <div class="now-title" id="nowTitle">
+                    Hindi Music Room
+                </div>
+            </div>
+
+            <div class="status">
+                READY
+            </div>
+
         </div>
 
-        <div class="current-song" id="current-song">
-          Search for a Hindi song
+
+        <div class="cassette">
+
+            <div class="reels">
+
+                <div class="reel" id="reel1"></div>
+                <div class="reel" id="reel2"></div>
+
+            </div>
+
+
+            <div class="cassette-label">
+
+                <div class="track-no" id="trackNo">
+                    DELUXE SALOON RADIO
+                </div>
+
+                <div class="song-title" id="songTitle">
+                    Search for a Hindi song
+                </div>
+
+                <div class="song-artist" id="songArtist">
+                    YouTube search · No API required
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="current-artist" id="current-artist">
-          Bollywood · Classics · 90s · 2000s · New
+
+        <div class="controls">
+
+            <button
+                class="control"
+                id="previous"
+                title="Previous"
+            >
+                ↶
+            </button>
+
+            <button
+                class="control play"
+                id="play"
+                title="Open song on YouTube"
+            >
+                ▶
+            </button>
+
+            <button
+                class="control"
+                id="next"
+                title="Next"
+            >
+                ↷
+            </button>
+
         </div>
 
-      </div>
 
-    </div>
-
-
-    <div class="controls">
-
-      <button class="control" id="previous" title="Previous">
-        ↶
-      </button>
-
-      <button class="control play" id="play" title="Play">
-        ▶
-      </button>
-
-      <button class="control" id="next" title="Next">
-        ↷
-      </button>
-
-    </div>
-
-
-    <div class="progress" id="progress">
-      <div class="progress-fill" id="progress-fill"></div>
-    </div>
-
-    <div class="times">
-      <span id="current-time">0:00</span>
-      <span id="duration">0:00</span>
-    </div>
-
-
-    <div class="options">
-
-      <button class="option active" id="shuffle">
-        🔀 Shuffle
-      </button>
-
-      <button class="option" id="mute">
-        🔊 Sound
-      </button>
-
-      <button class="option" id="ambient">
-        ✨ Ambient
-      </button>
-
-    </div>
-
-
-    <div class="music-area">
-
-      <div class="search-row">
-
-        <input
-          class="search-input"
-          id="search"
-          type="search"
-          placeholder="Search Hindi songs, singers, movies..."
-          autocomplete="off"
-        >
-
-        <button class="search-button" id="search-button">
-          Search
-        </button>
-
-      </div>
-
-      <div class="search-hint">
-        Try: <b>Arijit Singh</b>, <b>90s Hindi songs</b>,
-        <b>Kishore Kumar</b>, <b>SRK songs</b>,
-        <b>romantic Bollywood</b>
-      </div>
-
-
-      <div class="filters">
-
-        <button class="filter active" data-query="Hindi songs">
-          All Hindi
-        </button>
-
-        <button class="filter" data-query="Bollywood songs">
-          Bollywood
-        </button>
-
-        <button class="filter" data-query="90s Hindi songs">
-          90s
-        </button>
-
-        <button class="filter" data-query="2000s Hindi songs">
-          2000s
-        </button>
-
-        <button class="filter" data-query="old Hindi songs">
-          Classics
-        </button>
-
-        <button class="filter" data-query="Hindi romantic songs">
-          Romantic
-        </button>
-
-        <button class="filter" data-query="Hindi sad songs">
-          Sad
-        </button>
-
-        <button class="filter" data-query="Hindi party songs">
-          Party
-        </button>
-
-        <button class="filter" data-query="Hindi indie songs">
-          Indie
-        </button>
-
-      </div>
-
-
-      <div class="results" id="results">
-
-        <div class="empty">
-          Search for any Hindi song to begin.
+        <div class="progress">
+            <div class="progress-fill" id="progressFill"></div>
         </div>
 
-      </div>
+        <div class="times">
+            <span>0:00</span>
+            <span>YouTube</span>
+        </div>
+
+
+        <div class="options">
+
+            <button
+                class="option active"
+                id="shuffle"
+            >
+                🔀 Shuffle
+            </button>
+
+            <button
+                class="option"
+                id="ambient"
+            >
+                ✨ Ambient
+            </button>
+
+            <button
+                class="option"
+                id="rainMode"
+            >
+                🌧️ Rain
+            </button>
+
+        </div>
+
+
+        <div class="search-area">
+
+            <div class="search-row">
+
+                <input
+                    class="search-input"
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search Hindi songs, singers, movies..."
+                    autocomplete="off"
+                >
+
+                <button
+                    class="search-button"
+                    id="searchButton"
+                >
+                    Search
+                </button>
+
+            </div>
+
+
+            <div class="search-note">
+                Search opens YouTube directly — no API key required.
+            </div>
+
+
+            <div class="categories">
+
+                <button
+                    class="category active"
+                    data-query="Hindi songs"
+                >
+                    🇮🇳 All Hindi
+                </button>
+
+                <button
+                    class="category"
+                    data-query="90s Hindi songs"
+                >
+                    90s
+                </button>
+
+                <button
+                    class="category"
+                    data-query="2000s Hindi songs"
+                >
+                    2000s
+                </button>
+
+                <button
+                    class="category"
+                    data-query="2010s Hindi songs"
+                >
+                    2010s
+                </button>
+
+                <button
+                    class="category"
+                    data-query="old Hindi songs"
+                >
+                    Classics
+                </button>
+
+                <button
+                    class="category"
+                    data-query="Hindi romantic songs"
+                >
+                    Romantic
+                </button>
+
+                <button
+                    class="category"
+                    data-query="Hindi sad songs"
+                >
+                    Sad
+                </button>
+
+                <button
+                    class="category"
+                    data-query="Hindi party songs"
+                >
+                    Party
+                </button>
+
+                <button
+                    class="category"
+                    data-query="Hindi indie songs"
+                >
+                    Indie
+                </button>
+
+                <button
+                    class="category"
+                    data-query="Arijit Singh Hindi songs"
+                >
+                    Arijit Singh
+                </button>
+
+                <button
+                    class="category"
+                    data-query="Kishore Kumar Hindi songs"
+                >
+                    Kishore Kumar
+                </button>
+
+                <button
+                    class="category"
+                    data-query="Lata Mangeshkar Hindi songs"
+                >
+                    Lata Mangeshkar
+                </button>
+
+            </div>
+
+
+            <div class="library-title">
+                Quick Hindi Music
+            </div>
+
+
+            <div class="library" id="library"></div>
+
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 
 
 <section class="features">
 
-  <article class="feature">
-    <div class="feature-icon">🔎</div>
-    <h3>Search Anything</h3>
-    <p>
-      Search by song, singer, movie, decade or mood.
-      Your music library isn't limited to a fixed playlist.
-    </p>
-  </article>
+    <article class="feature">
 
-  <article class="feature">
-    <div class="feature-icon">🎵</div>
-    <h3>Hindi Music</h3>
-    <p>
-      Explore Bollywood, classics, 90s favourites,
-      2000s nostalgia, contemporary music and more.
-    </p>
-  </article>
+        <div class="feature-icon">🔎</div>
 
-  <article class="feature">
-    <div class="feature-icon">🌧️</div>
-    <h3>Rainy Saloon</h3>
-    <p>
-      Switch on rain mode and turn your browser into
-      a late-night neighbourhood saloon.
-    </p>
-  </article>
+        <h3>Search YouTube</h3>
+
+        <p>
+            Search practically any Hindi song, singer,
+            movie or music category without an API key.
+        </p>
+
+    </article>
+
+
+    <article class="feature">
+
+        <div class="feature-icon">🎵</div>
+
+        <h3>Hindi Music</h3>
+
+        <p>
+            90s, 2000s, classics, Bollywood,
+            romantic, sad, party and contemporary music.
+        </p>
+
+    </article>
+
+
+    <article class="feature">
+
+        <div class="feature-icon">💈</div>
+
+        <h3>Saloon Atmosphere</h3>
+
+        <p>
+            Retro colours, cassette reels, barber quotes
+            and rainy-night ambience.
+        </p>
+
+    </article>
 
 </section>
 
 
 <section class="quote-section">
 
-  <div class="eyebrow">From the barber chair</div>
+    <div class="eyebrow">
+        From the barber chair
+    </div>
 
-  <div class="quote" id="quote">
-    "Bhaiya, thoda side se chhota kar dena."
-  </div>
+    <div class="quote" id="quote">
+        "Bhaiya, thoda side se chhota kar dena."
+    </div>
 
-  <div class="quote-author" id="quote-author">
-    Regular Customer
-  </div>
+    <div class="quote-author" id="quoteAuthor">
+        Regular Customer
+    </div>
 
 </section>
 
 
 <section class="faq">
 
-  <div class="eyebrow">FAQ</div>
-
-  <h2>Deluxe Saloon</h2>
-
-  <details>
-    <summary>Can I search any Hindi song?</summary>
-
-    <div class="answer">
-      Yes. With the YouTube Data API configured,
-      the search box can query YouTube dynamically rather
-      than relying on a fixed list of songs.
+    <div class="eyebrow">
+        FAQ
     </div>
-  </details>
 
-  <details>
-    <summary>Does this website host the music?</summary>
+    <h2>
+        Deluxe Saloon
+    </h2>
 
-    <div class="answer">
-      No. Selected songs are played using YouTube's
-      embedded player technology. Your website does not
-      download or host the music files.
-    </div>
-  </details>
 
-  <details>
-    <summary>Can I use this on GitHub Pages?</summary>
+    <details>
 
-    <div class="answer">
-      Yes. The interface is completely static and can be
-      deployed on GitHub Pages. The YouTube API key should
-      be restricted to your GitHub Pages domain.
-    </div>
-  </details>
+        <summary>
+            Can I search any Hindi song?
+        </summary>
 
-  <details>
-    <summary>Can I make my own categories?</summary>
+        <div class="answer">
+            Yes. The Search button sends your search directly
+            to YouTube. No YouTube API key is required.
+        </div>
 
-    <div class="answer">
-      Yes. The category buttons near the search box are
-      simply predefined YouTube searches and can be changed
-      to anything you want.
-    </div>
-  </details>
+    </details>
+
+
+    <details>
+
+        <summary>
+            Why doesn't the song play inside this page?
+        </summary>
+
+        <div class="answer">
+            YouTube does not provide its search results to a
+            normal static webpage without its API. This version
+            therefore opens the official YouTube search page
+            instead of pretending to provide a search system
+            that will stop working.
+        </div>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            Does this require a server?
+        </summary>
+
+        <div class="answer">
+            No. Everything in this page is HTML, CSS and
+            JavaScript and can be hosted directly on GitHub Pages.
+        </div>
+
+    </details>
+
+
+    <details>
+
+        <summary>
+            Can I add my own music categories?
+        </summary>
+
+        <div class="answer">
+            Yes. The category buttons are simple YouTube
+            search queries and can be changed inside this file.
+        </div>
+
+    </details>
 
 </section>
 
@@ -1080,1041 +1183,1184 @@ body.raining .rain{
 
 <footer>
 
-  <div class="footer-title">
-    डीलक्स सैलून · Deluxe Saloon
-  </div>
+    <div class="footer-title">
+        डीलक्स सैलून · Deluxe Saloon
+    </div>
 
-  <div>
-    A little digital time machine for Hindi music lovers.
-  </div>
+    <div>
+        A digital time machine for Hindi music lovers.
+    </div>
 
-  <div class="footer-links">
-    <a href="#"
-       onclick="openSupport();return false;">
-      ❤️ Support
-    </a>
+    <div class="footer-links">
 
-    <a href="#"
-       onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
-      ↑ Top
-    </a>
+        <a
+            href="#"
+            onclick="openSupport();return false;"
+        >
+            ❤️ Support
+        </a>
 
-    <a href="mailto:pr@rjmedia.in">
-      Contact
-    </a>
-  </div>
+        <a href="#">
+            ↑ Top
+        </a>
 
-  <div>
-    © <span id="year"></span> Deluxe Saloon
-  </div>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener">
+            YouTube
+        </a>
+
+    </div>
+
+    <div>
+        © <span id="year"></span> Deluxe Saloon
+    </div>
 
 </footer>
 
 
-<button class="rain-button" id="rain-button">
-  🌧️ Rain: OFF
+<button
+    class="rain-button"
+    id="rainButton"
+>
+    🌧️ Rain: OFF
 </button>
 
 
-<div class="modal" id="support-modal">
+<div
+    class="modal"
+    id="modal"
+>
 
-  <div class="modal-card">
+    <div class="modal-card">
 
-    <button class="close" id="close-modal">×</button>
+        <button
+            class="close"
+            id="closeModal"
+        >
+            ×
+        </button>
 
-    <h2>❤️ Support Deluxe Saloon</h2>
+        <h2>
+            ❤️ Deluxe Saloon
+        </h2>
 
-    <p>
-      This is a static GitHub Pages project.
-      Replace this section with your own UPI QR code
-      or support link if you want to accept donations.
-    </p>
+        <p>
+            Thanks for visiting the saloon.
+            You can replace this popup with your own
+            UPI QR code, donation link or contact information.
+        </p>
 
-    <div class="api-note">
-      Tip: never put private server credentials or
-      unrestricted API keys into a public repository.
+        <button
+            class="modal-button"
+            id="dismissModal"
+        >
+            Close
+        </button>
+
     </div>
-
-  </div>
 
 </div>
 
 
-<div id="youtube-player"></div>
-
-
 <script>
 
-/* =========================================================
-   DELUXE SALOON CONFIGURATION
-========================================================= */
+/* =====================================================
+   HINDI MUSIC QUICK LIBRARY
+   =====================================================
 
-/*
-   IMPORTANT
+   These are SEARCH TERMS, not copyrighted audio files.
 
-   Put your YouTube Data API v3 key here.
+   Clicking a song opens its YouTube search.
+   No API key is required.
+===================================================== */
 
-   Example:
+const songs = [
 
-   const YOUTUBE_API_KEY = "AIzaSyXXXXXXXXXXXXXXXX";
+    {
+        title:"Tum Se Hi",
+        artist:"Jab We Met",
+        query:"Tum Se Hi Jab We Met"
+    },
 
-   For GitHub Pages, restrict the API key in Google Cloud
-   to your GitHub Pages website domain.
+    {
+        title:"Ajab Si",
+        artist:"Om Shanti Om",
+        query:"Ajab Si Om Shanti Om"
+    },
 
-   Without a key:
-   - The website UI still works.
-   - YouTube search will display an API-key message.
-   - You can still use the player with direct video IDs.
+    {
+        title:"Aankhon Mein Teri",
+        artist:"Om Shanti Om",
+        query:"Aankhon Mein Teri Om Shanti Om"
+    },
 
-*/
+    {
+        title:"Main Agar Kahoon",
+        artist:"Om Shanti Om",
+        query:"Main Agar Kahoon Om Shanti Om"
+    },
 
-const YOUTUBE_API_KEY = "";
+    {
+        title:"Khuda Jaane",
+        artist:"Bachna Ae Haseeno",
+        query:"Khuda Jaane Bachna Ae Haseeno"
+    },
+
+    {
+        title:"Tera Hone Laga Hoon",
+        artist:"Ajab Prem Ki Ghazab Kahani",
+        query:"Tera Hone Laga Hoon"
+    },
+
+    {
+        title:"Tu Jaane Na",
+        artist:"Ajab Prem Ki Ghazab Kahani",
+        query:"Tu Jaane Na"
+    },
+
+    {
+        title:"Pehli Nazar Mein",
+        artist:"Race",
+        query:"Pehli Nazar Mein Race"
+    },
+
+    {
+        title:"Kya Mujhe Pyaar Hai",
+        artist:"Woh Lamhe",
+        query:"Kya Mujhe Pyaar Hai"
+    },
+
+    {
+        title:"Zara Sa",
+        artist:"Jannat",
+        query:"Zara Sa Jannat"
+    },
+
+    {
+        title:"Iktara",
+        artist:"Wake Up Sid",
+        query:"Iktara Wake Up Sid"
+    },
+
+    {
+        title:"Aao Milo Chalo",
+        artist:"Jab We Met",
+        query:"Aao Milo Chalo"
+    },
+
+    {
+        title:"Kahin To Hogi Woh",
+        artist:"Jaane Tu Ya Jaane Na",
+        query:"Kahin To Hogi Woh"
+    },
+
+    {
+        title:"Kabhi Kabhi Aditi",
+        artist:"Jaane Tu Ya Jaane Na",
+        query:"Kabhi Kabhi Aditi"
+    },
+
+    {
+        title:"Khaabon Ke Parinday",
+        artist:"Zindagi Na Milegi Dobara",
+        query:"Khaabon Ke Parinday"
+    },
+
+    {
+        title:"Senorita",
+        artist:"Zindagi Na Milegi Dobara",
+        query:"Senorita Zindagi Na Milegi Dobara"
+    },
+
+    {
+        title:"Ilahi",
+        artist:"Yeh Jawaani Hai Deewani",
+        query:"Ilahi Yeh Jawaani Hai Deewani"
+    },
+
+    {
+        title:"Kabira",
+        artist:"Yeh Jawaani Hai Deewani",
+        query:"Kabira Yeh Jawaani Hai Deewani"
+    },
+
+    {
+        title:"Badtameez Dil",
+        artist:"Yeh Jawaani Hai Deewani",
+        query:"Badtameez Dil"
+    },
+
+    {
+        title:"Subhanallah",
+        artist:"Yeh Jawaani Hai Deewani",
+        query:"Subhanallah YJHD"
+    },
+
+    {
+        title:"Tum Hi Ho",
+        artist:"Aashiqui 2",
+        query:"Tum Hi Ho Aashiqui 2"
+    },
+
+    {
+        title:"Chahun Main Ya Naa",
+        artist:"Aashiqui 2",
+        query:"Chahun Main Ya Naa"
+    },
+
+    {
+        title:"Hum Mar Jayenge",
+        artist:"Aashiqui 2",
+        query:"Hum Mar Jayenge"
+    },
+
+    {
+        title:"Agar Tum Saath Ho",
+        artist:"Tamasha",
+        query:"Agar Tum Saath Ho"
+    },
+
+    {
+        title:"Matargashti",
+        artist:"Tamasha",
+        query:"Matargashti Tamasha"
+    },
+
+    {
+        title:"Kun Faya Kun",
+        artist:"Rockstar",
+        query:"Kun Faya Kun Rockstar"
+    },
+
+    {
+        title:"Phir Se Ud Chala",
+        artist:"Rockstar",
+        query:"Phir Se Ud Chala"
+    },
+
+    {
+        title:"Nadaan Parindey",
+        artist:"Rockstar",
+        query:"Nadaan Parindey"
+    },
+
+    {
+        title:"Tum Ho",
+        artist:"Rockstar",
+        query:"Tum Ho Rockstar"
+    },
+
+    {
+        title:"Tere Bina",
+        artist:"Guru",
+        query:"Tere Bina Guru A R Rahman"
+    },
+
+    {
+        title:"Jai Ho",
+        artist:"Slumdog Millionaire",
+        query:"Jai Ho A R Rahman"
+    },
+
+    {
+        title:"Chaiyya Chaiyya",
+        artist:"Dil Se",
+        query:"Chaiyya Chaiyya Dil Se"
+    },
+
+    {
+        title:"Satranga",
+        artist:"Animal",
+        query:"Satranga Animal"
+    },
+
+    {
+        title:"O Maahi",
+        artist:"Dunki",
+        query:"O Maahi Dunki"
+    },
+
+    {
+        title:"Apna Bana Le",
+        artist:"Bhediya",
+        query:"Apna Bana Le"
+    },
+
+    {
+        title:"Kesariya",
+        artist:"Brahmastra",
+        query:"Kesariya Brahmastra"
+    },
+
+    {
+        title:"Ranjha",
+        artist:"Shershaah",
+        query:"Ranjha Shershaah"
+    },
+
+    {
+        title:"Heeriye",
+        artist:"Jasleen Royal",
+        query:"Heeriye Jasleen Royal"
+    },
+
+    {
+        title:"Chaleya",
+        artist:"Jawan",
+        query:"Chaleya Jawan"
+    },
+
+    {
+        title:"Tujh Mein Rab Dikhta Hai",
+        artist:"Rab Ne Bana Di Jodi",
+        query:"Tujh Mein Rab Dikhta Hai"
+    },
+
+    {
+        title:"Haule Haule",
+        artist:"Rab Ne Bana Di Jodi",
+        query:"Haule Haule Rab Ne Bana Di Jodi"
+    },
+
+    {
+        title:"Tujhe Dekha To",
+        artist:"DDLJ",
+        query:"Tujhe Dekha To DDLJ"
+    },
+
+    {
+        title:"Pehla Nasha",
+        artist:"Jo Jeeta Wohi Sikandar",
+        query:"Pehla Nasha"
+    },
+
+    {
+        title:"Ek Ladki Ko Dekha",
+        artist:"1942 A Love Story",
+        query:"Ek Ladki Ko Dekha"
+    },
+
+    {
+        title:"Pehla Pehla Pyar Hai",
+        artist:"Hum Aapke Hain Koun",
+        query:"Pehla Pehla Pyar Hai"
+    },
+
+    {
+        title:"Chura Ke Dil Mera",
+        artist:"Main Khiladi Tu Anari",
+        query:"Chura Ke Dil Mera"
+    },
+
+    {
+        title:"Tip Tip Barsa Paani",
+        artist:"Mohra",
+        query:"Tip Tip Barsa Paani"
+    },
+
+    {
+        title:"Aankh Marey",
+        artist:"Simmba",
+        query:"Aankh Marey Simmba"
+    },
+
+    {
+        title:"Ole Ole",
+        artist:"Yeh Dillagi",
+        query:"Ole Ole Yeh Dillagi"
+    },
+
+    {
+        title:"Koi Kahe Kehta Rahe",
+        artist:"Dil Chahta Hai",
+        query:"Koi Kahe Kehta Rahe"
+    },
+
+    {
+        title:"Jaane Kyun",
+        artist:"Dostana",
+        query:"Jaane Kyun Dostana"
+    },
+
+    {
+        title:"Desi Girl",
+        artist:"Dostana",
+        query:"Desi Girl Dostana"
+    },
+
+    {
+        title:"It's Magic",
+        artist:"Koi Mil Gaya",
+        query:"It's Magic Koi Mil Gaya"
+    },
+
+    {
+        title:"You Are My Soniya",
+        artist:"Kabhi Khushi Kabhie Gham",
+        query:"You Are My Soniya K3G"
+    },
+
+    {
+        title:"Bole Chudiyan",
+        artist:"Kabhi Khushi Kabhie Gham",
+        query:"Bole Chudiyan K3G"
+    },
+
+    {
+        title:"Say Shava Shava",
+        artist:"Kabhi Khushi Kabhie Gham",
+        query:"Say Shava Shava"
+    },
+
+    {
+        title:"Suraj Hua Maddham",
+        artist:"Kabhi Khushi Kabhie Gham",
+        query:"Suraj Hua Maddham"
+    },
+
+    {
+        title:"Kal Ho Naa Ho",
+        artist:"Kal Ho Naa Ho",
+        query:"Kal Ho Naa Ho Title Song"
+    },
+
+    {
+        title:"Pretty Woman",
+        artist:"Kal Ho Naa Ho",
+        query:"Pretty Woman Kal Ho Naa Ho"
+    },
+
+    {
+        title:"It's The Time To Disco",
+        artist:"Kal Ho Naa Ho",
+        query:"It's The Time To Disco"
+    },
+
+    {
+        title:"Aankhon Se Tune Kya Keh Diya",
+        artist:"Ghulam",
+        query:"Aankhon Se Tune Kya Keh Diya"
+    },
+
+    {
+        title:"Pardesi Pardesi",
+        artist:"Raja Hindustani",
+        query:"Pardesi Pardesi Raja Hindustani"
+    },
+
+    {
+        title:"Do Dil Mil Rahe Hain",
+        artist:"Pardes",
+        query:"Do Dil Mil Rahe Hain"
+    },
+
+    {
+        title:"Mere Khwabon Mein",
+        artist:"DDLJ",
+        query:"Mere Khwabon Mein DDLJ"
+    },
+
+    {
+        title:"Yeh Kaali Kaali Aankhen",
+        artist:"Baazigar",
+        query:"Yeh Kaali Kaali Aankhen"
+    },
+
+    {
+        title:"Chura Liya Hai Tumne",
+        artist:"Yaadon Ki Baaraat",
+        query:"Chura Liya Hai Tumne Jo Dil Ko"
+    },
+
+    {
+        title:"Pal Pal Dil Ke Paas",
+        artist:"Blackmail",
+        query:"Pal Pal Dil Ke Paas"
+    },
+
+    {
+        title:"Neele Neele Ambar Par",
+        artist:"Kalakaar",
+        query:"Neele Neele Ambar Par"
+    },
+
+    {
+        title:"Roop Tera Mastana",
+        artist:"Aradhana",
+        query:"Roop Tera Mastana"
+    },
+
+    {
+        title:"Mere Sapno Ki Rani",
+        artist:"Aradhana",
+        query:"Mere Sapno Ki Rani"
+    },
+
+    {
+        title:"O Mere Dil Ke Chain",
+        artist:"Mere Jeevan Saathi",
+        query:"O Mere Dil Ke Chain"
+    },
+
+    {
+        title:"Kya Mujhe Pyar Hai",
+        artist:"Woh Lamhe",
+        query:"Kya Mujhe Pyar Hai"
+    },
+
+    {
+        title:"Tu Hi Meri Shab Hai",
+        artist:"Gangster",
+        query:"Tu Hi Meri Shab Hai"
+    },
+
+    {
+        title:"Ya Ali",
+        artist:"Gangster",
+        query:"Ya Ali Gangster"
+    },
+
+    {
+        title:"Aadat",
+        artist:"Kalyug",
+        query:"Aadat Kalyug"
+    },
+
+    {
+        title:"Woh Lamhe Woh Baatein",
+        artist:"Zeher",
+        query:"Woh Lamhe Woh Baatein"
+    },
+
+    {
+        title:"Aao Milon Chalo",
+        artist:"Jab We Met",
+        query:"Aao Milo Chalo"
+    },
+
+    {
+        title:"Mauja Hi Mauja",
+        artist:"Jab We Met",
+        query:"Mauja Hi Mauja"
+    },
+
+    {
+        title:"Nagada Nagada",
+        artist:"Jab We Met",
+        query:"Nagada Nagada Jab We Met"
+    },
+
+    {
+        title:"Mauja Hi Mauja",
+        artist:"Retro Bollywood",
+        query:"Mauja Hi Mauja Bollywood"
+    }
+
+];
 
 
-/* =========================================================
-   APP STATE
-========================================================= */
+/* =====================================================
+   VARIABLES
+===================================================== */
 
-let player = null;
-
-let playerReady = false;
-
-let currentResults = [];
-
-let queue = [];
-
-let currentQueueIndex = -1;
-
-let isPlaying = false;
-
-let shuffleEnabled = true;
-
-let muted = false;
-
-let ambient = false;
+let currentIndex = 0;
+let shuffle = true;
+let currentList = [...songs];
 
 
-/* =========================================================
-   DOM
-========================================================= */
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const library =
+    document.getElementById("library");
 
 const searchInput =
-  document.getElementById("search");
+    document.getElementById("searchInput");
 
 const searchButton =
-  document.getElementById("search-button");
+    document.getElementById("searchButton");
 
-const results =
-  document.getElementById("results");
+const songTitle =
+    document.getElementById("songTitle");
 
-const playButton =
-  document.getElementById("play");
+const songArtist =
+    document.getElementById("songArtist");
 
-const previousButton =
-  document.getElementById("previous");
-
-const nextButton =
-  document.getElementById("next");
-
-const currentSong =
-  document.getElementById("current-song");
-
-const currentArtist =
-  document.getElementById("current-artist");
-
-const trackNumber =
-  document.getElementById("track-number");
-
-const progress =
-  document.getElementById("progress");
-
-const progressFill =
-  document.getElementById("progress-fill");
-
-const currentTime =
-  document.getElementById("current-time");
-
-const duration =
-  document.getElementById("duration");
+const trackNo =
+    document.getElementById("trackNo");
 
 const reel1 =
-  document.getElementById("reel1");
+    document.getElementById("reel1");
 
 const reel2 =
-  document.getElementById("reel2");
-
-const shuffleButton =
-  document.getElementById("shuffle");
-
-const muteButton =
-  document.getElementById("mute");
-
-const ambientButton =
-  document.getElementById("ambient");
+    document.getElementById("reel2");
 
 
-/* =========================================================
-   ESCAPE HTML
-========================================================= */
+/* =====================================================
+   YOUTUBE SEARCH URL
+===================================================== */
 
-function escapeHTML(value){
+function youtubeSearch(query){
 
-  return String(value || "")
-    .replaceAll("&","&amp;")
-    .replaceAll("<","&lt;")
-    .replaceAll(">","&gt;")
-    .replaceAll('"',"&quot;")
-    .replaceAll("'","&#039;");
+    return (
+        "https://www.youtube.com/results?search_query=" +
+        encodeURIComponent(query)
+    );
 
 }
 
 
-/* =========================================================
-   SEARCH YOUTUBE
-========================================================= */
+/* =====================================================
+   OPEN YOUTUBE SEARCH
+===================================================== */
 
-async function searchYouTube(query){
+function openYouTubeSearch(query){
 
-  query = query.trim();
-
-  if(!query){
-    return;
-  }
-
-  if(!YOUTUBE_API_KEY){
-
-    results.innerHTML = `
-      <div class="empty">
-        <strong>YouTube Search is not configured yet.</strong>
-        <br><br>
-        Add your YouTube Data API v3 key to
-        <code>YOUTUBE_API_KEY</code> near the top of this file.
-      </div>
-    `;
-
-    return;
-  }
-
-
-  results.innerHTML = `
-    <div class="loading">
-      Searching Hindi music...
-    </div>
-  `;
-
-
-  try{
-
-    const params = new URLSearchParams({
-
-      part:"snippet",
-
-      q:query,
-
-      type:"video",
-
-      videoCategoryId:"10",
-
-      maxResults:"25",
-
-      key:YOUTUBE_API_KEY
-
-    });
-
-
-    const response = await fetch(
-      "https://www.googleapis.com/youtube/v3/search?" +
-      params.toString()
+    window.open(
+        youtubeSearch(query),
+        "_blank",
+        "noopener,noreferrer"
     );
 
+}
 
-    if(!response.ok){
 
-      throw new Error(
-        `YouTube API error ${response.status}`
-      );
+/* =====================================================
+   UPDATE PLAYER DISPLAY
+===================================================== */
+
+function updateDisplay(){
+
+    if(!currentList.length){
+        return;
+    }
+
+    const song =
+        currentList[currentIndex];
+
+    songTitle.textContent =
+        song.title;
+
+    songArtist.textContent =
+        song.artist;
+
+    trackNo.textContent =
+        "TRACK " +
+        String(currentIndex + 1)
+            .padStart(2,"0");
+
+}
+
+
+/* =====================================================
+   PLAY CURRENT
+===================================================== */
+
+function playCurrent(){
+
+    if(!currentList.length){
+        return;
+    }
+
+    const song =
+        currentList[currentIndex];
+
+    updateDisplay();
+
+    openYouTubeSearch(
+        song.query
+    );
+
+}
+
+
+/* =====================================================
+   NEXT
+===================================================== */
+
+function nextSong(){
+
+    if(!currentList.length){
+        return;
+    }
+
+    if(shuffle && currentList.length > 1){
+
+        let next;
+
+        do{
+
+            next =
+                Math.floor(
+                    Math.random() *
+                    currentList.length
+                );
+
+        }while(next === currentIndex);
+
+        currentIndex = next;
+
+    }else{
+
+        currentIndex =
+            (currentIndex + 1) %
+            currentList.length;
 
     }
 
+    updateDisplay();
 
-    const data =
-      await response.json();
-
-
-    currentResults =
-      (data.items || [])
-        .filter(item => item.id && item.id.videoId)
-        .map(item => ({
-
-          id:item.id.videoId,
-
-          title:item.snippet.title,
-
-          channel:item.snippet.channelTitle,
-
-          thumbnail:
-            item.snippet.thumbnails?.medium?.url ||
-            item.snippet.thumbnails?.default?.url
-
-        }));
-
-
-    renderResults();
-
-  }
-
-  catch(error){
-
-    console.error(error);
-
-    results.innerHTML = `
-      <div class="empty">
-        Search failed.
-        <br>
-        Check your API key, quota and domain restrictions.
-      </div>
-    `;
-
-  }
+    playCurrent();
 
 }
 
 
-/* =========================================================
-   RENDER RESULTS
-========================================================= */
+/* =====================================================
+   PREVIOUS
+===================================================== */
 
-function renderResults(){
+function previousSong(){
 
-  if(!currentResults.length){
+    if(!currentList.length){
+        return;
+    }
 
-    results.innerHTML = `
-      <div class="empty">
-        No results found.
-      </div>
-    `;
+    currentIndex =
+        (currentIndex - 1 + currentList.length) %
+        currentList.length;
 
-    return;
-  }
+    updateDisplay();
 
-
-  results.innerHTML = "";
-
-
-  currentResults.forEach((video,index)=>{
-
-    const item =
-      document.createElement("div");
-
-    item.className = "result";
-
-
-    item.innerHTML = `
-
-      <img
-        class="thumbnail"
-        src="${escapeHTML(video.thumbnail)}"
-        alt=""
-        loading="lazy"
-      >
-
-      <div class="result-info">
-
-        <div class="result-title">
-          ${escapeHTML(video.title)}
-        </div>
-
-        <div class="result-channel">
-          ${escapeHTML(video.channel)}
-        </div>
-
-      </div>
-
-      <button
-        class="result-play"
-        aria-label="Play"
-      >
-        ▶
-      </button>
-
-    `;
-
-
-    item.addEventListener("click",()=>{
-
-      queue =
-        [...currentResults];
-
-      currentQueueIndex =
-        index;
-
-      playQueueItem();
-
-    });
-
-
-    results.appendChild(item);
-
-  });
+    playCurrent();
 
 }
 
 
-/* =========================================================
-   PLAY QUEUE ITEM
-========================================================= */
+/* =====================================================
+   RENDER LIBRARY
+===================================================== */
 
-function playQueueItem(){
+function renderLibrary(list){
 
-  if(
-    currentQueueIndex < 0 ||
-    currentQueueIndex >= queue.length
-  ){
-    return;
-  }
+    library.innerHTML = "";
 
+    if(!list.length){
 
-  const video =
-    queue[currentQueueIndex];
+        library.innerHTML = `
+            <div style="
+                padding:20px;
+                text-align:center;
+                color:var(--muted);
+                border:1px dashed var(--line);
+                border-radius:12px;
+            ">
+                No songs found.
+            </div>
+        `;
 
-
-  currentSong.textContent =
-    cleanTitle(video.title);
-
-  currentArtist.textContent =
-    video.channel || "YouTube";
-
-
-  trackNumber.textContent =
-    `TRACK ${String(currentQueueIndex + 1).padStart(2,"0")}`;
+        return;
+    }
 
 
-  if(!playerReady){
+    list.forEach((song,index)=>{
 
-    alert(
-      "YouTube player is still loading. Please try again."
-    );
+        const item =
+            document.createElement("div");
 
-    return;
-
-  }
+        item.className =
+            "song";
 
 
-  player.loadVideoById(video.id);
+        item.innerHTML = `
 
-}
+            <div class="song-number">
+                ${String(index + 1).padStart(2,"0")}
+            </div>
 
+            <div class="song-info">
 
-/* =========================================================
-   CLEAN YOUTUBE TITLE
-========================================================= */
+                <div class="song-name">
+                    ${escapeHTML(song.title)}
+                </div>
 
-function cleanTitle(title){
+                <div class="song-meta">
+                    ${escapeHTML(song.artist)}
+                </div>
 
-  return String(title || "")
-    .replace(/\(Official.*?\)/ig,"")
-    .replace(/\[Official.*?\]/ig,"")
-    .replace(/\b(official music video|official video|full video)\b/ig,"")
-    .replace(/\s+/g," ")
-    .trim();
+            </div>
 
-}
+            <button
+                class="song-search"
+                title="Search on YouTube"
+            >
+                ▶
+            </button>
 
-
-/* =========================================================
-   NEXT
-========================================================= */
-
-function nextTrack(){
-
-  if(!queue.length){
-    return;
-  }
+        `;
 
 
-  if(shuffleEnabled && queue.length > 1){
-
-    let next;
-
-    do{
-
-      next =
-        Math.floor(
-          Math.random() * queue.length
+        item.addEventListener(
+            "click",
+            ()=>{
+                currentList = [...list];
+                currentIndex = index;
+                updateDisplay();
+                playCurrent();
+            }
         );
 
+
+        library.appendChild(item);
+
+    });
+
+}
+
+
+/* =====================================================
+   SEARCH LOCAL LIBRARY
+===================================================== */
+
+function searchLocal(query){
+
+    query =
+        query.trim().toLowerCase();
+
+    if(!query){
+
+        currentList =
+            [...songs];
+
+    }else{
+
+        currentList =
+            songs.filter(song=>{
+
+                return (
+                    song.title
+                        .toLowerCase()
+                        .includes(query) ||
+
+                    song.artist
+                        .toLowerCase()
+                        .includes(query) ||
+
+                    song.query
+                        .toLowerCase()
+                        .includes(query)
+                );
+
+            });
+
     }
-    while(next === currentQueueIndex);
 
+    currentIndex = 0;
 
-    currentQueueIndex = next;
-
-  }
-  else{
-
-    currentQueueIndex =
-      (currentQueueIndex + 1) %
-      queue.length;
-
-  }
-
-
-  playQueueItem();
+    renderLibrary(currentList);
 
 }
 
 
-/* =========================================================
-   PREVIOUS
-========================================================= */
+/* =====================================================
+   GLOBAL YOUTUBE SEARCH
+===================================================== */
 
-function previousTrack(){
+function globalSearch(){
 
-  if(!queue.length){
-    return;
-  }
+    const query =
+        searchInput.value.trim();
 
+    if(!query){
 
-  currentQueueIndex =
-    (currentQueueIndex - 1 + queue.length) %
-    queue.length;
+        searchInput.focus();
 
+        return;
 
-  playQueueItem();
+    }
 
-}
+    songTitle.textContent =
+        query;
 
+    songArtist.textContent =
+        "Searching YouTube...";
 
-/* =========================================================
-   PLAY BUTTON
-========================================================= */
+    trackNo.textContent =
+        "YOUTUBE SEARCH";
 
-playButton.addEventListener("click",()=>{
-
-  if(!playerReady){
-
-    alert(
-      "Select a song first."
+    openYouTubeSearch(
+        query + " Hindi song"
     );
 
-    return;
-
-  }
+}
 
 
-  if(isPlaying){
-
-    player.pauseVideo();
-
-  }
-  else{
-
-    player.playVideo();
-
-  }
-
-});
-
-
-previousButton.addEventListener(
-  "click",
-  previousTrack
-);
-
-
-nextButton.addEventListener(
-  "click",
-  nextTrack
-);
-
-
-/* =========================================================
-   SHUFFLE
-========================================================= */
-
-shuffleButton.addEventListener("click",()=>{
-
-  shuffleEnabled =
-    !shuffleEnabled;
-
-  shuffleButton.classList.toggle(
-    "active",
-    shuffleEnabled
-  );
-
-});
-
-
-/* =========================================================
-   MUTE
-========================================================= */
-
-muteButton.addEventListener("click",()=>{
-
-  muted =
-    !muted;
-
-
-  muteButton.textContent =
-    muted
-      ? "🔇 Muted"
-      : "🔊 Sound";
-
-
-  if(!playerReady){
-    return;
-  }
-
-
-  if(muted){
-
-    player.mute();
-
-  }
-  else{
-
-    player.unMute();
-
-  }
-
-});
-
-
-/* =========================================================
-   AMBIENT
-========================================================= */
-
-ambientButton.addEventListener("click",()=>{
-
-  ambient =
-    !ambient;
-
-
-  ambientButton.classList.toggle(
-    "active",
-    ambient
-  );
-
-
-  document.body.style.background =
-    ambient
-      ? `
-        radial-gradient(
-          circle at 50% 0%,
-          rgba(111,139,104,.15),
-          transparent 35%
-        ),
-        linear-gradient(
-          180deg,
-          #151713,
-          #0e100d
-        )
-      `
-      : "";
-
-});
-
-
-/* =========================================================
-   SEARCH EVENTS
-========================================================= */
+/* =====================================================
+   SEARCH BUTTON
+===================================================== */
 
 searchButton.addEventListener(
-  "click",
-  ()=>searchYouTube(searchInput.value)
+    "click",
+    globalSearch
 );
 
 
 searchInput.addEventListener(
-  "keydown",
-  event=>{
+    "keydown",
+    event=>{
 
-    if(event.key === "Enter"){
+        if(event.key === "Enter"){
 
-      event.preventDefault();
+            event.preventDefault();
 
-      searchYouTube(
-        searchInput.value
-      );
-
-    }
-
-  }
-);
-
-
-/* =========================================================
-   CATEGORY BUTTONS
-========================================================= */
-
-document
-  .querySelectorAll(".filter")
-  .forEach(button=>{
-
-    button.addEventListener(
-      "click",
-      ()=>{
-
-        document
-          .querySelectorAll(".filter")
-          .forEach(b =>
-            b.classList.remove("active")
-          );
-
-
-        button.classList.add("active");
-
-
-        const query =
-          button.dataset.query;
-
-
-        searchInput.value =
-          query;
-
-
-        searchYouTube(query);
-
-      }
-    );
-
-  });
-
-
-/* =========================================================
-   PROGRESS
-========================================================= */
-
-progress.addEventListener("click",event=>{
-
-  if(!playerReady){
-    return;
-  }
-
-
-  const rect =
-    progress.getBoundingClientRect();
-
-
-  const percent =
-    (event.clientX - rect.left) /
-    rect.width;
-
-
-  const seconds =
-    player.getDuration() * percent;
-
-
-  player.seekTo(seconds,true);
-
-});
-
-
-/* =========================================================
-   YOUTUBE IFRAME API
-========================================================= */
-
-function loadYouTubeAPI(){
-
-  const script =
-    document.createElement("script");
-
-  script.src =
-    "https://www.youtube.com/iframe_api";
-
-  document.head.appendChild(script);
-
-}
-
-
-window.onYouTubeIframeAPIReady =
-function(){
-
-  player =
-    new YT.Player(
-      "youtube-player",
-      {
-
-        width:"1",
-
-        height:"1",
-
-        playerVars:{
-
-          playsinline:1,
-
-          controls:0,
-
-          rel:0,
-
-          modestbranding:1
-
-        },
-
-
-        events:{
-
-          onReady:function(){
-
-            playerReady = true;
-
-          },
-
-
-          onStateChange:function(event){
-
-            if(
-              event.data ===
-              YT.PlayerState.PLAYING
-            ){
-
-              isPlaying = true;
-
-              playButton.textContent =
-                "Ⅱ";
-
-              reel1.classList.add(
-                "playing"
-              );
-
-              reel2.classList.add(
-                "playing"
-              );
-
-            }
-
-
-            else if(
-              event.data ===
-              YT.PlayerState.PAUSED
-            ){
-
-              isPlaying = false;
-
-              playButton.textContent =
-                "▶";
-
-              reel1.classList.remove(
-                "playing"
-              );
-
-              reel2.classList.remove(
-                "playing"
-              );
-
-            }
-
-
-            else if(
-              event.data ===
-              YT.PlayerState.ENDED
-            ){
-
-              nextTrack();
-
-            }
-
-          },
-
-          onError:function(event){
-
-            console.warn(
-              "YouTube player error:",
-              event.data
-            );
-
-            nextTrack();
-
-          }
+            globalSearch();
 
         }
 
-      }
+    }
+);
+
+
+/* =====================================================
+   LIVE LOCAL SEARCH
+===================================================== */
+
+searchInput.addEventListener(
+    "input",
+    ()=>{
+        searchLocal(
+            searchInput.value
+        );
+    }
+);
+
+
+/* =====================================================
+   CATEGORY BUTTONS
+===================================================== */
+
+document
+    .querySelectorAll(".category")
+    .forEach(button=>{
+
+        button.addEventListener(
+            "click",
+            ()=>{
+
+                document
+                    .querySelectorAll(".category")
+                    .forEach(item=>{
+                        item.classList.remove("active");
+                    });
+
+                button.classList.add("active");
+
+                const query =
+                    button.dataset.query;
+
+                searchInput.value =
+                    query;
+
+                searchLocal(query);
+
+                openYouTubeSearch(query);
+
+            }
+        );
+
+    });
+
+
+/* =====================================================
+   CONTROLS
+===================================================== */
+
+document
+    .getElementById("play")
+    .addEventListener(
+        "click",
+        playCurrent
     );
 
-};
+
+document
+    .getElementById("next")
+    .addEventListener(
+        "click",
+        nextSong
+    );
 
 
-/* =========================================================
-   PLAYER TIMER
-========================================================= */
-
-setInterval(()=>{
-
-  if(!playerReady || !isPlaying){
-    return;
-  }
+document
+    .getElementById("previous")
+    .addEventListener(
+        "click",
+        previousSong
+    );
 
 
-  const current =
-    player.getCurrentTime();
+/* =====================================================
+   SHUFFLE
+===================================================== */
+
+document
+    .getElementById("shuffle")
+    .addEventListener(
+        "click",
+        function(){
+
+            shuffle =
+                !shuffle;
+
+            this.classList.toggle(
+                "active",
+                shuffle
+            );
+
+        }
+    );
 
 
-  const total =
-    player.getDuration();
+/* =====================================================
+   AMBIENT
+===================================================== */
+
+document
+    .getElementById("ambient")
+    .addEventListener(
+        "click",
+        function(){
+
+            this.classList.toggle(
+                "active"
+            );
+
+            document.body.classList.toggle(
+                "ambient-on"
+            );
+
+            document.body.style.background =
+                document.body.classList.contains(
+                    "ambient-on"
+                )
+                ?
+                `
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(111,139,104,.16),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    180deg,
+                    #151713,
+                    #0e100d
+                )
+                `
+                :
+                "";
+
+        }
+    );
 
 
-  if(!total){
-    return;
-  }
-
-
-  const percentage =
-    (current / total) * 100;
-
-
-  progressFill.style.width =
-    `${percentage}%`;
-
-
-  currentTime.textContent =
-    formatTime(current);
-
-
-  duration.textContent =
-    formatTime(total);
-
-},500);
-
-
-function formatTime(seconds){
-
-  if(
-    !seconds ||
-    Number.isNaN(seconds)
-  ){
-    return "0:00";
-  }
-
-
-  const minutes =
-    Math.floor(seconds / 60);
-
-
-  const secs =
-    Math.floor(seconds % 60)
-      .toString()
-      .padStart(2,"0");
-
-
-  return `${minutes}:${secs}`;
-
-}
-
-
-/* =========================================================
+/* =====================================================
    RAIN
-========================================================= */
+===================================================== */
 
-function createRain(){
-
-  const rain =
+const rain =
     document.getElementById("rain");
 
-
-  for(let i=0;i<90;i++){
-
-    const drop =
-      document.createElement("span");
-
-
-    drop.className =
-      "drop";
-
-
-    drop.style.left =
-      `${Math.random()*100}%`;
-
-
-    drop.style.animationDuration =
-      `${.55 + Math.random()*.9}s`;
-
-
-    drop.style.animationDelay =
-      `${Math.random()*2}s`;
-
-
-    drop.style.opacity =
-      `${.2 + Math.random()*.7}`;
-
-
-    rain.appendChild(drop);
-
-  }
-
-}
-
+const rainButton =
+    document.getElementById("rainButton");
 
 let raining = false;
 
 
-document
-  .getElementById("rain-button")
-  .addEventListener("click",()=>{
+for(let i=0;i<100;i++){
 
-    raining =
-      !raining;
+    const drop =
+        document.createElement("span");
 
+    drop.className =
+        "drop";
 
-    document.body.classList.toggle(
-      "raining",
-      raining
-    );
+    drop.style.left =
+        Math.random() * 100 + "%";
 
+    drop.style.animationDuration =
+        (.5 + Math.random() * .8) + "s";
 
-    document.getElementById(
-      "rain-button"
-    ).textContent =
-      raining
-        ? "🌧️ Rain: ON"
-        : "🌧️ Rain: OFF";
+    drop.style.animationDelay =
+        Math.random() * 2 + "s";
 
-  });
+    drop.style.opacity =
+        .2 + Math.random() * .7;
 
+    rain.appendChild(drop);
 
-createRain();
+}
 
 
-/* =========================================================
+rainButton.addEventListener(
+    "click",
+    ()=>{
+
+        raining =
+            !raining;
+
+        document.body.classList.toggle(
+            "raining",
+            raining
+        );
+
+        rainButton.textContent =
+            raining
+            ? "🌧️ Rain: ON"
+            : "🌧️ Rain: OFF";
+
+    }
+);
+
+
+/* =====================================================
    QUOTES
-========================================================= */
+===================================================== */
 
 const quotes = [
 
-  [
-    "Bhaiya, thoda side se chhota kar dena.",
-    "Regular Customer"
-  ],
+    [
+        "Bhaiya, thoda side se chhota kar dena.",
+        "Regular Customer"
+    ],
 
-  [
-    "Same haircut kar dena, aapko yaad hai.",
-    "Regular Customer"
-  ],
+    [
+        "Same haircut kar dena, aapko yaad hai.",
+        "Regular Customer"
+    ],
 
-  [
-    "TV ka volume thoda badha do!",
-    "Someone in the chair"
-  ],
+    [
+        "TV ka volume thoda badha do!",
+        "Someone in the chair"
+    ],
 
-  [
-    "Bas normal cutting kar do.",
-    "Every Customer"
-  ],
+    [
+        "Bas normal cutting kar do.",
+        "Every Customer"
+    ],
 
-  [
-    "Thoda aur trim kar do.",
-    "The Customer"
-  ],
+    [
+        "Thoda aur trim kar do.",
+        "The Customer"
+    ],
 
-  [
-    "Bhaiya, magazine idhar dena.",
-    "Waiting Customer"
-  ],
+    [
+        "Bhaiya, magazine idhar dena.",
+        "Waiting Customer"
+    ],
 
-  [
-    "Aaj kya style karna hai sir?",
-    "The Barber"
-  ]
+    [
+        "Aaj kya style karna hai sir?",
+        "The Barber"
+    ]
 
 ];
 
@@ -2122,91 +2368,152 @@ const quotes = [
 let quoteIndex = 0;
 
 
-setInterval(()=>{
+setInterval(
+    ()=>{
 
-  quoteIndex =
-    (quoteIndex + 1) %
-    quotes.length;
+        quoteIndex =
+            (quoteIndex + 1) %
+            quotes.length;
+
+        document.getElementById(
+            "quote"
+        ).textContent =
+            `"${quotes[quoteIndex][0]}"`;
+
+        document.getElementById(
+            "quoteAuthor"
+        ).textContent =
+            "— " +
+            quotes[quoteIndex][1];
+
+    },
+    6000
+);
 
 
-  document.getElementById("quote")
-    .textContent =
-    `"${quotes[quoteIndex][0]}"`;
-
-
-  document.getElementById("quote-author")
-    .textContent =
-    `— ${quotes[quoteIndex][1]}`;
-
-},6000);
-
-
-/* =========================================================
-   SUPPORT MODAL
-========================================================= */
+/* =====================================================
+   MODAL
+===================================================== */
 
 const modal =
-  document.getElementById(
-    "support-modal"
-  );
+    document.getElementById("modal");
 
 
 function openSupport(){
 
-  modal.classList.add("open");
+    modal.classList.add("open");
 
 }
 
 
 document
-  .getElementById("supportButton")
-  .addEventListener(
-    "click",
-    openSupport
-  );
+    .getElementById("support")
+    .addEventListener(
+        "click",
+        openSupport
+    );
 
 
 document
-  .getElementById("close-modal")
-  .addEventListener(
-    "click",
-    ()=>modal.classList.remove("open")
-  );
+    .getElementById("closeModal")
+    .addEventListener(
+        "click",
+        ()=>{
+            modal.classList.remove("open");
+        }
+    );
+
+
+document
+    .getElementById("dismissModal")
+    .addEventListener(
+        "click",
+        ()=>{
+            modal.classList.remove("open");
+        }
+    );
 
 
 modal.addEventListener(
-  "click",
-  event=>{
+    "click",
+    event=>{
 
-    if(event.target === modal){
+        if(event.target === modal){
 
-      modal.classList.remove(
-        "open"
-      );
+            modal.classList.remove(
+                "open"
+            );
+
+        }
 
     }
-
-  }
 );
 
 
-/* =========================================================
-   FOOTER YEAR
-========================================================= */
+/* =====================================================
+   ESCAPE HTML
+===================================================== */
+
+function escapeHTML(value){
+
+    return String(value || "")
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+
+}
+
+
+/* =====================================================
+   KEYBOARD SHORTCUTS
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    event=>{
+
+        if(
+            event.target.tagName === "INPUT" ||
+            event.target.tagName === "TEXTAREA"
+        ){
+            return;
+        }
+
+        if(event.code === "Space"){
+
+            event.preventDefault();
+
+            playCurrent();
+
+        }
+
+        if(event.code === "ArrowRight"){
+            nextSong();
+        }
+
+        if(event.code === "ArrowLeft"){
+            previousSong();
+        }
+
+    }
+);
+
+
+/* =====================================================
+   INITIALISE
+===================================================== */
 
 document.getElementById("year")
-  .textContent =
-  new Date().getFullYear();
+    .textContent =
+    new Date().getFullYear();
 
+renderLibrary(songs);
 
-/* =========================================================
-   LOAD YOUTUBE API
-========================================================= */
-
-loadYouTubeAPI();
+updateDisplay();
 
 </script>
 
 </body>
 </html>
-```
